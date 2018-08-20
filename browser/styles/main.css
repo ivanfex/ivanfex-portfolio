@@ -1,1 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #424B54;
+}
+
+br {
+	line-height: 6em;
+}
+
+.blocky-block {
+	display: flex;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.text-block {
+	font-family: 'Share Tech Mono', monospace;
+	background-color: #F9F9F9;
+}
+
+.info-block {
+	font-family: 'Share Tech Mono', monospace;
+	background-color: #F9F9F9;
+}
+
+.projects-block {
+	font-family: 'Share Tech Mono', monospace;
+	background-color: #F9F9F9
+}
+
+.text {
+	margin: 0;
+	font-size: 4.5em;
+}
+
+.text-wrapper {
+	width: 80%;
+}
+
+.projects-list {
+	font-size: 2em;
+}
+
+.bold {
+	font-weight: 900;
+}
+.text-wrapper > p {
+	font-family: 'Inconsolata', monospace;
+	font-size: 1.2em;
+}
+
+.text-columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.divider > br {
+	line-height: 4em;
+}
+
+a:visited {
+	color: black;
+}
+
+a:link {
+	color: black;
+}
