@@ -5,8 +5,7 @@ class InfoBlock extends Component {
 		return (
 			<section className="info-block blocky-block">
 				<div className="text-wrapper">
-					<h1 className="text">This is just a bunch of non-sense because I haven't thought about some nice stuff to put in here.</h1>
-					<br/>
+					<h1 className="text">I develop web apps with JavaScript, create games with C#, and make little things that move || control with Arduino && Raspberry Pi</h1>
 				</div>
 			</section>
 		)

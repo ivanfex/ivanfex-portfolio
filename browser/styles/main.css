@@ -22,17 +22,17 @@ br {
 
 .text-block {
 	font-family: 'Share Tech Mono', monospace;
-	/* background-color: #424B54; */
+	background-color: #F9F9F9;
 }
 
 .info-block {
 	font-family: 'Share Tech Mono', monospace;
-	/* background-color: #FAFAFA; */
+	background-color: #F9F9F9;
 }
 
 .projects-block {
 	font-family: 'Share Tech Mono', monospace;
-	/* background-color: #555555; */
+	background-color: #F9F9F9
 }
 
 .text {
@@ -60,4 +60,16 @@ br {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+}
+
+.divider > br {
+	line-height: 4em;
+}
+
+a:visited {
+	color: black;
+}
+
+a:link {
+	color: black;
 }

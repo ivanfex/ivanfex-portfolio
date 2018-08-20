@@ -18,19 +18,19 @@ class SkillsBlock extends Component {
 						<h1>E-Commerce</h1>
 						<p>Stripe, Shopify, Square</p>
 					</div>
-					<div>|<br/>|<br/>|<br/>|<br/>|<br/>|</div>
+					<div className="divider">|<br/>|<br/>|<br/>|<br/>|<br/>|<br/>|<br/>|<br/>|</div>
 					<div>
 						<h1 className="text">What I don't</h1>
 						<h1>Body</h1>
 						<p>Cartwheels, splits, handstands, cheese</p>
 						<h1>Tech</h1>
-						<p>Push to master, global variables</p>
+						<p>Push to master, global variables, blame devops</p>
 
 						<h1 className="text">Contact</h1>
-						<p>ivaneduardo68@gmail.com</p>
-						<p>LinkedIn</p>
-						<p>GitHub</p>
-						<p>Resume</p>
+						<a href="mailto:ivaneduardo68@gmail.com"><p>ivaneduardo68@gmail.com</p></a>
+						<a href="https://github.com/ivanfex"><p>GitHub</p></a>
+						<a href="https://www.linkedin.com/in/ivanfex/"><p>LinkedIn</p></a>
+						<a href="ivanfex-resume.pdf" target="_blank"><p>Resume</p></a>
 					</div>
 				</div>
 			</section>
