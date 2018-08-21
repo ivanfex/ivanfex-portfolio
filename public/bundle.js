@@ -329,17 +329,32 @@ var ProjectsBlock = function (_Component) {
 							_react2.default.createElement(
 								"li",
 								null,
-								"We Fight Forward - fullPage, jQuery, Django"
+								_react2.default.createElement(
+									"a",
+									{ href: "http://www.wefightforward.com/" },
+									"We Fight Forward"
+								),
+								" - fullPage, jQuery, Django"
 							),
 							_react2.default.createElement(
 								"li",
 								null,
-								"MIME - React, Node, TensorFlow.js"
+								_react2.default.createElement(
+									"a",
+									{ href: "http://www.mimeframe.com/" },
+									"MIME"
+								),
+								" - React, Node, TensorFlow.js"
 							),
 							_react2.default.createElement(
 								"li",
 								null,
-								"Pillars - C#, Unity"
+								_react2.default.createElement(
+									"a",
+									{ href: "https://ivanfex.itch.io/pillars" },
+									"Pillars"
+								),
+								" - C#, Unity"
 							)
 						)
 					),
@@ -2492,14 +2507,13 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);", ""]);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Inconsolata);", ""]);
 
 // module
-exports.push([module.i, "body {\n\tmargin: 0;\n\tpadding: 0;\n\tbackground-color: #424B54;\n\tcursor: url(" + escape(__webpack_require__(/*! ./../../public/cursor.png */ "./public/cursor.png")) + "), auto;\n}¯\n\nbr {\n\tline-height: 6em;\n}\n\n.blocky-block {\n\tdisplay: flex;\n\tmargin: 0;\n\twidth: 100vw;\n\theight: 100vh;\n\talign-items: center;\n\tjustify-content: center;\n}\n\n.text-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.info-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.projects-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9\n}\n\n.text {\n\tmargin: 0;\n\tfont-size: 4.5em;\n}\n\n.text-wrapper {\n\twidth: 80%;\n}\n\n.projects-list {\n\tfont-size: 2em;\n}\n\n.bold {\n\tfont-weight: 900;\n}\n.text-wrapper > p {\n\tfont-family: 'Inconsolata', monospace;\n\tfont-size: 1.2em;\n}\n\n.text-columns {\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: space-evenly;\n}\n\n.divider > br {\n\tline-height: 4em;\n}\n\na:visited {\n\tcolor: black;\n}\n\na:link {\n\tcolor: black;\n}", ""]);
+exports.push([module.i, "body {\n\tmargin: 0;\n\tpadding: 0;\n\tbackground-color: #424B54;\n}¯\n\nbr {\n\tline-height: 6em;\n}\n\n.blocky-block {\n\tdisplay: flex;\n\tmargin: 0;\n\twidth: 100vw;\n\theight: 100vh;\n\talign-items: center;\n\tjustify-content: center;\n}\n\n.text-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.info-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.projects-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9\n}\n\n.text {\n\tmargin: 0;\n\tfont-size: 4.5em;\n}\n\n.text-wrapper {\n\twidth: 80%;\n}\n\n.projects-list {\n\tfont-size: 2em;\n}\n\n.bold {\n\tfont-weight: 900;\n}\n.text-wrapper > p {\n\tfont-family: 'Inconsolata', monospace;\n\tfont-size: 1.2em;\n}\n\n.text-columns {\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: space-evenly;\n}\n\n.divider > br {\n\tline-height: 4em;\n}\n\na:visited {\n\tcolor: black;\n}\n\na:link {\n\tcolor: black;\n}", ""]);
 
 // exports
 
@@ -2588,33 +2602,6 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/lib/url/escape.js":
-/*!***************************************************!*\
-  !*** ./node_modules/css-loader/lib/url/escape.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
 }
 
 
@@ -26126,17 +26113,6 @@ module.exports = function(originalModule) {
 	return module;
 };
 
-
-/***/ }),
-
-/***/ "./public/cursor.png":
-/*!***************************!*\
-  !*** ./public/cursor.png ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "6254082e3e91e5fdfa3c0de68f69fb6c.png";
 
 /***/ })
 
