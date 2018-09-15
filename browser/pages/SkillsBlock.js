@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class SkillsBlock extends Component {
 	render(){
 		return (
-			<section className="info-block blocky-block">
+			<section className="skills-block blocky-block">
 				<div className="text-wrapper text-columns">
 					<div>
 						<h1 className="text">What I do</h1>

@@ -249,13 +249,13 @@ var InfoBlock = function (_Component) {
 					_react2.default.createElement(
 						"h1",
 						{ className: "text" },
-						"I develop web apps with JavaScript, create games with C#, and make little things that move || control with Arduino && Raspberry Pi"
+						"I develop web apps, create games, and make little things that move || control with Arduino && Raspberry Pi"
 					),
 					_react2.default.createElement("br", null),
 					_react2.default.createElement(
 						"h1",
 						{ className: "text" },
-						"I love telling stories through interactive media"
+						"I tell stories through interactive media"
 					)
 				)
 			);
@@ -440,7 +440,7 @@ var SkillsBlock = function (_Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"section",
-				{ className: "info-block blocky-block" },
+				{ className: "skills-block blocky-block" },
 				_react2.default.createElement(
 					"div",
 					{ className: "text-wrapper text-columns" },
@@ -636,6 +636,30 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var Developer = function Developer() {
+	return _react2.default.createElement(
+		_reshake.ShakeSlow,
+		{ className: 'shaky', fixed: true },
+		_react2.default.createElement(
+			'span',
+			{ className: 'underlined underlined--thick' },
+			'developer'
+		)
+	);
+};
+
+var Maker = function Maker() {
+	return _react2.default.createElement(
+		_reshake.ShakeSlow,
+		{ className: 'shaky', fixed: true },
+		_react2.default.createElement(
+			'span',
+			{ className: 'underlined underlined--thick full-back' },
+			'maker'
+		)
+	);
+};
+
 var TextBlock = function (_Component) {
 	_inherits(TextBlock, _Component);
 
@@ -659,25 +683,9 @@ var TextBlock = function (_Component) {
 						'h1',
 						{ className: 'text' },
 						'I\u2019m Ivan Felix, a full stack ',
-						_react2.default.createElement(
-							_reshake.ShakeSlow,
-							{ className: 'shaky', fixed: true },
-							_react2.default.createElement(
-								'span',
-								{ className: 'underlined underlined--thick' },
-								'developer'
-							)
-						),
+						_react2.default.createElement(Developer, null),
 						' and ',
-						_react2.default.createElement(
-							_reshake.ShakeSlow,
-							{ className: 'shaky', fixed: true },
-							_react2.default.createElement(
-								'span',
-								{ className: 'underlined underlined--thick' },
-								'maker'
-							)
-						),
+						_react2.default.createElement(Maker, null),
 						' driven by curiosity'
 					),
 					_react2.default.createElement('br', null),
@@ -2535,7 +2543,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Sha
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Inconsolata);", ""]);
 
 // module
-exports.push([module.i, "body {\n\tmargin: 0;\n\tpadding: 0;\n\tbackground-color: #424B54;\n}\n\nbr {\n\tline-height: 6em;\n}\n\n.blocky-block {\n\tdisplay: flex;\n\tmargin: 0;\n\twidth: 100vw;\n\theight: 100vh;\n\talign-items: center;\n\tjustify-content: center;\n}\n\n.text-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.info-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.projects-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9\n}\n\n.text {\n\tmargin: 0;\n\tfont-size: 4.5em;\n}\n\n.text-wrapper {\n\twidth: 80%;\n}\n\n.projects-list {\n\tfont-size: 2em;\n}\n\n.bold {\n\tfont-weight: 900;\n}\n.text-wrapper > p {\n\tfont-family: 'Inconsolata', monospace;\n\tfont-size: 1.2em;\n}\n\n.text-columns {\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: space-evenly;\n}\n\n.divider > br {\n\tline-height: 4em;\n}\n\na:visited {\n\tcolor: black;\n}\n\na:link {\n\tcolor: black;\n}\n\n.shaky {\n\tdisplay: inline-block;\n}\n\n\n.underlined {\n\tcolor: black;\n\tflex: 1;\n\tline-height: 1.2;\n\ttext-decoration: none;\n\tbackground-image: linear-gradient(to right, yellow 0, yellow 100%);\n\tbackground-position: 0 1.2em;\n\tbackground-size: 0 100%;\n\tbackground-repeat: no-repeat;\n\ttransition: background .5s;\n  }\n  .underlined:hover {\n\tbackground-size: 100% 100%;\n  }\n  .underlined--thin {\n\tbackground-image: linear-gradient(to right, black 0, black 100%);\n  }\n  .underlined--thick {\n\tbackground-position: 0 -0.1em;\n  }\n  .underlined--offset {\n\tbackground-position: 0 0.2em;\n\tbox-shadow: inset 0 -.5em 0 0 white;\n  }\n  .underlined--gradient {\n\tbackground-position: 0 -0.1em;\n\tbackground-image: linear-gradient(to right, yellow 0, lightgreen 100%);\n  }\n  .underlined--reverse {\n\tbackground-position: 100% -0.1em;\n\ttransition: background 1s;\n\tbackground-image: linear-gradient(to right, yellow 0, yellow 100%);\n  }", ""]);
+exports.push([module.i, "body {\n\tmargin: 0;\n\tpadding: 0;\n\theight: 100%;\n}\n\nbr {\n\tline-height: 6em;\n}\n\n.blocky-block {\n\tdisplay: flex;\n\tmargin: 0;\n\twidth: 100vw;\n\theight: 100vh;\n  \tmin-height:100vh;\n\talign-items: center;\n\tjustify-content: center;\n}\n\nhtml > body .blocky-block {\n\theight: auto;\n}\n\n.text-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.info-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.projects-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.skills-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.text {\n\tmargin: 0;\n\tfont-size: 4.5em;\n}\n\n@media (max-width: 925px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 4em;\n\t}\n}\n\n@media (max-width: 750px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 3.5em;\n\t}\n}\n\n@media (max-width: 500px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 3em;\n\t}\n}\n\n.text-wrapper {\n\twidth: 80%;\n}\n\n.projects-list {\n\tfont-size: 2em;\n}\n\n.text-wrapper > p {\n\tfont-family: 'Inconsolata', monospace;\n\tfont-size: 1.2em;\n}\n\n.text-columns {\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: space-evenly;\n}\n\n.divider > br {\n\tline-height: 4em;\n}\n\n@media (max-width: 1050px) {\n\t.text-columns {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tjustify-content: space-evenly;\n\t}\n\n\t.divider {\n\t\tdisplay: none;\n\t}\n\n\t.projects-block {\n\t\tfont-family: 'Share Tech Mono', monospace;\n\t\tbackground-color: #F9F9F9;\n\t}\n}\n\na:visited {\n\tcolor: black;\n}\n\na:link {\n\tcolor: black;\n}\n\n.shaky {\n\tdisplay: inline-block;\n}\n\n\n.underlined {\n\tcolor: black;\n\tflex: 1;\n\tline-height: 1.2;\n\ttext-decoration: none;\n\tbackground-image: url(\"https://media.giphy.com/media/Pp9W9tuVF5NwQ/giphy.gif\");\n\tbackground-position: 0 1.2em;\n\tbackground-size: 0 100%;\n\tbackground-repeat: no-repeat;\n\ttransition: background .5s;\n  }\n  .underlined:hover {\n\tbackground-size: 100% 100%;\n  }\n  .underlined--thick {\n\tbackground-position: 0 -0.1em;\n  }\n", ""]);
 
 // exports
 
