@@ -4,9 +4,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #424B54;
-	cursor: url('./../../public/cursor.png'), auto;
-}¯
+	height: 100%;
+}
 
 br {
 	line-height: 6em;
@@ -17,8 +16,13 @@ br {
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
+  	min-height:100vh;
 	align-items: center;
 	justify-content: center;
+}
+
+html > body .blocky-block {
+	height: auto;
 }
 
 .text-block {
@@ -33,12 +37,38 @@ br {
 
 .projects-block {
 	font-family: 'Share Tech Mono', monospace;
-	background-color: #F9F9F9
+	background-color: #F9F9F9;
+}
+
+.skills-block {
+	font-family: 'Share Tech Mono', monospace;
+	background-color: #F9F9F9;
 }
 
 .text {
 	margin: 0;
 	font-size: 4.5em;
+}
+
+@media (max-width: 925px) {
+	.text {
+		margin: 0;
+		font-size: 4em;
+	}
+}
+
+@media (max-width: 750px) {
+	.text {
+		margin: 0;
+		font-size: 3.5em;
+	}
+}
+
+@media (max-width: 500px) {
+	.text {
+		margin: 0;
+		font-size: 3em;
+	}
 }
 
 .text-wrapper {
@@ -49,9 +79,6 @@ br {
 	font-size: 2em;
 }
 
-.bold {
-	font-weight: 900;
-}
 .text-wrapper > p {
 	font-family: 'Inconsolata', monospace;
 	font-size: 1.2em;
@@ -67,6 +94,23 @@ br {
 	line-height: 4em;
 }
 
+@media (max-width: 1050px) {
+	.text-columns {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.divider {
+		display: none;
+	}
+
+	.projects-block {
+		font-family: 'Share Tech Mono', monospace;
+		background-color: #F9F9F9;
+	}
+}
+
 a:visited {
 	color: black;
 }
@@ -74,3 +118,26 @@ a:visited {
 a:link {
 	color: black;
 }
+
+.shaky {
+	display: inline-block;
+}
+
+
+.underlined {
+	color: black;
+	flex: 1;
+	line-height: 1.2;
+	text-decoration: none;
+	background-image: url("https://media.giphy.com/media/Pp9W9tuVF5NwQ/giphy.gif");
+	background-position: 0 1.2em;
+	background-size: 0 100%;
+	background-repeat: no-repeat;
+	transition: background .5s;
+  }
+  .underlined:hover {
+	background-size: 100% 100%;
+  }
+  .underlined--thick {
+	background-position: 0 -0.1em;
+  }

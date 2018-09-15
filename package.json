@@ -18,6 +18,7 @@
 		"pg": "^7.4.3",
 		"react": "^16.4.0",
 		"react-dom": "^16.4.0",
+		"react-flip-toolkit": "^4.0.6",
 		"react-redux": "^5.0.7",
 		"react-router": "^4.2.0",
 		"react-router-dom": "^4.2.2",
@@ -25,7 +26,9 @@
 		"redux-devtools-extension": "^2.13.2",
 		"redux-logger": "^3.0.6",
 		"redux-thunk": "^2.3.0",
-		"sequelize": "^4.37.10"
+		"reshake": "^1.1.5",
+		"sequelize": "^4.37.10",
+		"styled-components": "^3.4.5"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.3",
