@@ -122,6 +122,10 @@ var _SkillsBlock = __webpack_require__(/*! ./pages/SkillsBlock */ "./browser/pag
 
 var _SkillsBlock2 = _interopRequireDefault(_SkillsBlock);
 
+var _Birdeye = __webpack_require__(/*! ./pages/Birdeye */ "./browser/pages/Birdeye.js");
+
+var _Birdeye2 = _interopRequireDefault(_Birdeye);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -146,6 +150,7 @@ var Main = function (_Component) {
 				'div',
 				null,
 				_react2.default.createElement(_TextBlock2.default, null),
+				_react2.default.createElement(_Birdeye2.default, null),
 				_react2.default.createElement(_InfoBlock2.default, null),
 				_react2.default.createElement(_ProjectsBlock2.default, null),
 				_react2.default.createElement(_SkillsBlock2.default, null)
@@ -197,6 +202,132 @@ _reactDom2.default.render(_react2.default.createElement(
 	{ store: _store2.default },
 	_react2.default.createElement(_Main2.default, null)
 ), document.getElementById('app'));
+
+/***/ }),
+
+/***/ "./browser/pages/Birdeye.js":
+/*!**********************************!*\
+  !*** ./browser/pages/Birdeye.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BirdeyeBlock = function (_Component) {
+	_inherits(BirdeyeBlock, _Component);
+
+	function BirdeyeBlock() {
+		_classCallCheck(this, BirdeyeBlock);
+
+		var _this = _possibleConstructorReturn(this, (BirdeyeBlock.__proto__ || Object.getPrototypeOf(BirdeyeBlock)).call(this));
+
+		_this.state = {
+			firstParts: [],
+			lastParts: [],
+			centers: [],
+			center: null
+		};
+		_this.skyscape = _this.skyscape.bind(_this);
+		_this.setter = _this.setter.bind(_this);
+		return _this;
+	}
+
+	_createClass(BirdeyeBlock, [{
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			this.skyscape();
+		}
+	}, {
+		key: "skyscape",
+		value: function skyscape() {
+			var _this2 = this;
+
+			var firstParts = [];
+			var lastParts = [];
+			var centers = [];
+
+			var _loop = function _loop(i) {
+				firstParts.push(_react2.default.createElement("div", { key: i, onMouseEnter: function onMouseEnter() {
+						return _this2.setter(i);
+					}, className: "part" }));
+			};
+
+			for (var i = 1; i < 7; i++) {
+				_loop(i);
+			}
+
+			for (var i = 1; i < 14; i++) {
+				var center = _react2.default.createElement(
+					"div",
+					{ className: "eyes-container", onMouseEnter: function onMouseEnter() {
+							return _this2.setter(13);
+						} },
+					_react2.default.createElement("img", { className: "eyes", key: 13, src: "/nums/" + i + ".png" })
+				);
+				centers.push(center);
+			}
+
+			var _loop2 = function _loop2(_i) {
+				lastParts.push(_react2.default.createElement("div", { key: _i, onMouseEnter: function onMouseEnter() {
+						return _this2.setter(_i);
+					}, className: "part" }));
+			};
+
+			for (var _i = 7; _i < 13; _i++) {
+				_loop2(_i);
+			}
+
+			this.setState({ firstParts: firstParts, lastParts: lastParts, centers: centers });
+		}
+	}, {
+		key: "setter",
+		value: function setter(num) {
+			this.setState({ center: this.state.centers[num - 1] });
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			var _state = this.state,
+			    firstParts = _state.firstParts,
+			    lastParts = _state.lastParts,
+			    center = _state.center;
+
+			return _react2.default.createElement(
+				"section",
+				{ className: "birdeye-block blocky-block" },
+				_react2.default.createElement(
+					"div",
+					{ className: "cloud-container" },
+					[firstParts, center, lastParts]
+				)
+			);
+		}
+	}]);
+
+	return BirdeyeBlock;
+}(_react.Component);
+
+exports.default = BirdeyeBlock;
 
 /***/ }),
 
@@ -2543,7 +2674,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Sha
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Inconsolata);", ""]);
 
 // module
-exports.push([module.i, "body {\n\tmargin: 0;\n\tpadding: 0;\n\theight: 100%;\n}\n\nbr {\n\tline-height: 6em;\n}\n\n.blocky-block {\n\tdisplay: flex;\n\tmargin: 0;\n\twidth: 100vw;\n\theight: 100vh;\n  \tmin-height:100vh;\n\talign-items: center;\n\tjustify-content: center;\n}\n\nhtml > body .blocky-block {\n\theight: auto;\n}\n\n.text-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.info-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.projects-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.skills-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tbackground-color: #F9F9F9;\n}\n\n.text {\n\tmargin: 0;\n\tfont-size: 4.5em;\n}\n\n@media (max-width: 925px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 4em;\n\t}\n}\n\n@media (max-width: 750px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 3.5em;\n\t}\n}\n\n@media (max-width: 500px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 3em;\n\t}\n}\n\n.text-wrapper {\n\twidth: 80%;\n}\n\n.projects-list {\n\tfont-size: 2em;\n}\n\n.text-wrapper > p {\n\tfont-family: 'Inconsolata', monospace;\n\tfont-size: 1.2em;\n}\n\n.text-columns {\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: space-evenly;\n}\n\n.divider > br {\n\tline-height: 4em;\n}\n\n@media (max-width: 1050px) {\n\t.text-columns {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tjustify-content: space-evenly;\n\t}\n\n\t.divider {\n\t\tdisplay: none;\n\t}\n\n\t.projects-block {\n\t\tfont-family: 'Share Tech Mono', monospace;\n\t\tbackground-color: #F9F9F9;\n\t}\n}\n\na:visited {\n\tcolor: black;\n}\n\na:link {\n\tcolor: black;\n}\n\n.shaky {\n\tdisplay: inline-block;\n}\n\n\n.underlined {\n\tcolor: black;\n\tflex: 1;\n\tline-height: 1.2;\n\ttext-decoration: none;\n\tbackground-image: url(\"https://media.giphy.com/media/Pp9W9tuVF5NwQ/giphy.gif\");\n\tbackground-position: 0 1.2em;\n\tbackground-size: 0 100%;\n\tbackground-repeat: no-repeat;\n\ttransition: background .5s;\n  }\n  .underlined:hover {\n\tbackground-size: 100% 100%;\n  }\n  .underlined--thick {\n\tbackground-position: 0 -0.1em;\n  }\n", ""]);
+exports.push([module.i, "body {\n\tmargin: 0;\n\tpadding: 0;\n\theight: 100%;\n\tbackground-color: #F9F9F9;\n}\n\nbr {\n\tline-height: 6em;\n}\n\n.blocky-block {\n\tfont-family: 'Share Tech Mono', monospace;\n\tdisplay: flex;\n\tmargin: 0;\n\twidth: 100vw;\n\theight: 100vh;\n  \tmin-height:100vh;\n\talign-items: center;\n\tjustify-content: center;\n}\n\nhtml > body .blocky-block {\n\theight: auto;\n}\n\n.birdeye-block {\n\tbackground-image: url('/clouds.jpg');\n\t/* background-color: teal; */\n\tbackground-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n\n.text-block {\n\tbackground-color: #F9F9F9;\n}\n\n.info-block {\n\tbackground-color: #F9F9F9;\n}\n\n.projects-block {\n\tbackground-color: #F9F9F9;\n}\n\n.skills-block {\n\tbackground-color: #F9F9F9;\n}\n\n.text {\n\tmargin: 0;\n\tfont-size: 4.5em;\n}\n\n@media (max-width: 925px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 4em;\n\t}\n}\n\n@media (max-width: 750px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 3.5em;\n\t}\n}\n\n@media (max-width: 500px) {\n\t.text {\n\t\tmargin: 0;\n\t\tfont-size: 3em;\n\t}\n}\n\n.text-wrapper {\n\twidth: 80%;\n}\n\n.projects-list {\n\tfont-size: 2em;\n}\n\n.text-wrapper > p {\n\tfont-family: 'Inconsolata', monospace;\n\tfont-size: 1.2em;\n}\n\n.text-columns {\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: space-evenly;\n}\n\n.divider > br {\n\tline-height: 4em;\n}\n\n@media (max-width: 1050px) {\n\t.text-columns {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tjustify-content: space-evenly;\n\t}\n\n\t.divider {\n\t\tdisplay: none;\n\t}\n}\n\n@media (max-width: 1050px) and (orientation: portrait) {\n\t.projects-block {\n\t\tmargin-top: 8vh;\n\t\tbackground-color: #F9F9F9;\n\t}\n\n\t.skills-block {\n\t\tmargin-top: 8vh;\n\t\tbackground-color: #F9F9F9;\n\t}\n\n\t.info-block {\n\t\tmargin-top: 10vh;\n\t\tbackground-color: #F9F9F9;\n\t}\n}\n\na:visited {\n\tcolor: black;\n}\n\na:link {\n\tcolor: black;\n}\n\n.shaky {\n\tdisplay: inline-block;\n}\n\n\n.underlined {\n\tcolor: black;\n\tflex: 1;\n\tline-height: 1.2;\n\ttext-decoration: none;\n\tbackground-image: url(\"https://media.giphy.com/media/Pp9W9tuVF5NwQ/giphy.gif\");\n\tbackground-position: 0 1.2em;\n\tbackground-size: 0 100%;\n\tbackground-repeat: no-repeat;\n\ttransition: background .5s;\n\tcolor: #c7a9d1;\n  }\n  .underlined:hover {\n\tbackground-size: 100% 100%;\n  }\n  .underlined--thick {\n\tbackground-position: 0 -0.1em;\n  }\n\n  .clouds { \n    /* Full height */\n    height: 100vh;\n}\n\n.cloud-container {\n\theight: 100vh;\n\twidth: 100vw;\n\tdisplay: flex;\n\tflex-direction: row;\n\tflex-wrap: wrap;\n}\n\n.eyes-container {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tbackground-color: rgba(0, 0, 0, 0.1);\n\twidth: 60%;\n\theight: 33%;\n}\n\n.eyes {\n\theight: 100%;\n}\n\n.part {\n\twidth: 20%;\n\theight: 33%;\n}\n", ""]);
 
 // exports
 
